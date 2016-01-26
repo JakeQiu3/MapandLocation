@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  地图和定位
+//  动画大全
 //
-//  Created by 邱少依 on 16/1/26.
+//  Created by 邱少依 on 16/1/5.
 //  Copyright © 2016年 QSY. All rights reserved.
 //
 
@@ -10,6 +10,4 @@
 
 @interface ViewController : UIViewController
 
-
 @end
-
