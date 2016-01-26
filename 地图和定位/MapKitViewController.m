@@ -78,6 +78,7 @@
 
 
 //我这次就是要看看
+
 //- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
 //     //由于当前位置的标注也是一个大头针，所以此时需要判断，此代理方法返回nil使用默认大头针视图
 //    if ([annotation isKindOfClass:[Annotation class]]) {
