@@ -18,7 +18,7 @@
 @property (nonatomic,strong) UIImage *icon;
 #pragma mark 详情描述
 @property (nonatomic,copy) NSString *detail;
-#pragma mark 星级评价
+#pragma mark 星级评价图标
 @property (nonatomic,strong) UIImage *rate;
 
 @end
