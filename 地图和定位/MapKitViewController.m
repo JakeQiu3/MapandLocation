@@ -77,6 +77,7 @@
 #pragma mark 显示大头针时调用，注意方法中的annotation参数是即将显示的大头针对象
 
 
+//我这次就是要看看
 
 //- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
 //     //由于当前位置的标注也是一个大头针，所以此时需要判断，此代理方法返回nil使用默认大头针视图
