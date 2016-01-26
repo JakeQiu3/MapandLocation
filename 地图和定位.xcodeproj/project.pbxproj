@@ -57,6 +57,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30118BC01C57BDE000C755E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				737578891C5744B700CEB825 /* CalloutAnnotation.h */,
+				7375788A1C5744B700CEB825 /* CalloutAnnotation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		30118BC11C57BDF000C755E5 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				7375788C1C57453D00CEB825 /* CalloutAnnotationView.h */,
+				7375788D1C57453D00CEB825 /* CalloutAnnotationView.m */,
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
 		7375787C1C573D2200CEB825 /* AppleMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +96,8 @@
 				737578841C57444B00CEB825 /* MapKitViewController.m */,
 				737578861C57449E00CEB825 /* Annotation.h */,
 				737578871C57449E00CEB825 /* Annotation.m */,
-				737578891C5744B700CEB825 /* CalloutAnnotation.h */,
-				7375788A1C5744B700CEB825 /* CalloutAnnotation.m */,
-				7375788C1C57453D00CEB825 /* CalloutAnnotationView.h */,
-				7375788D1C57453D00CEB825 /* CalloutAnnotationView.m */,
+				30118BC01C57BDE000C755E5 /* Model */,
+				30118BC11C57BDF000C755E5 /* VIew */,
 			);
 			name = MapKit;
 			sourceTree = "<group>";

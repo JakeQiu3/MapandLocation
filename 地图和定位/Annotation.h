@@ -14,7 +14,7 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subtitle;
 #pragma mark 自定义一个图片属性，创建大头针视图
-@property (nonatomic, strong) UIImage *imge;
+@property (nonatomic, strong) UIImage *image;
 #pragma mark 大头针详情左侧图标
 @property (nonatomic,strong) UIImage *icon;
 #pragma mark 大头针详情描述
