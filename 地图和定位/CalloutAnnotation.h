@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+@interface CalloutAnnotation : NSObject<MKAnnotation>
+@property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (nonatomic, copy,readonly) NSString *title;
+@property (nonatomic, copy,readonly) NSString *subtitle;
 
-@interface CalloutAnnotation : NSObject
+#pragma mark 左侧图标
+@property (nonatomic,strong) UIImage *icon;
+#pragma mark 详情描述
+@property (nonatomic,copy) NSString *detail;
+#pragma mark 星级评价
+@property (nonatomic,strong) UIImage *rate;
 
 @end
