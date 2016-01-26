@@ -17,9 +17,12 @@
     return self;
 }
     
+- (void)layout {
+    
+}
 
 + (instancetype)calloutViewWithMapView:(MKMapView *)mapView {
-    
+    return self;
 }
 
 @end
