@@ -6,7 +6,7 @@
 //  Copyright © 2016年 QSY. All rights reserved.
 //
 
-#import <MapKit/MapKit.h>
+#import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 @class CalloutAnnotation;

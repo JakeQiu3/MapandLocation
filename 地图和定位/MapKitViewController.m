@@ -12,7 +12,7 @@
 #import "Annotation.h"
 #import "CalloutAnnotation.h"
 #import "CalloutAnnotationView.h"
-@interface MapKitViewController ()<MKMapViewDelegate> {
+@interface MapKitViewController ()<MKMapViewDelegate,CLLocationManagerDelegate> {
     CLLocationManager *_locationManager;
     MKMapView *_mapView;
 }
@@ -40,8 +40,20 @@
     
     //请求定位服务
     _locationManager = [[CLLocationManager alloc] init];
+    
+    
     if (![CLLocationManager locationServicesEnabled] || [CLLocationManager authorizationStatus]!=kCLAuthorizationStatusAuthorizedWhenInUse) {
+        //设置代理
+        _locationManager.delegate = self;
+        //设置定位精度
+        _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+        //定位频率,每隔多少米定位一次
+        CLLocationDistance distance=10.0;//十米定位一次
+        _locationManager.distanceFilter=distance;
+        //启动跟踪定位
+        [_locationManager startUpdatingLocation];
         [_locationManager requestWhenInUseAuthorization];
+        [_locationManager requestAlwaysAuthorization];
     }
 }
 
@@ -54,7 +66,7 @@
     Annotation *annotation1 = [[Annotation alloc]init];
     annotation1.title = @"WuNa Studio";
     annotation1.subtitle = @"WuNa Studio Happy";
-    annotation1.coordinate = location1;
+    annotation1.coordinate = location1;//大头针位置
     annotation1.image = [UIImage imageNamed:@"icon_pin_floating"];
     annotation1.icon = [UIImage imageNamed:@"icon_mark1"];
     annotation1.detail = @"要房子不重要，重要的是心安";
@@ -65,7 +77,7 @@
     Annotation *annotation2=[[Annotation alloc]init];
     annotation2.title=@"Qiushao";
     annotation2.subtitle=@"Qiushao House";
-    annotation2.coordinate=location2;
+    annotation2.coordinate=location2;//大头针位置
     annotation2.image=[UIImage imageNamed:@"icon_paopao_waterdrop_streetscape.png"];
     annotation2.icon=[UIImage imageNamed:@"icon_mark2.png"];
     annotation2.detail=@"买不起房子不要紧，要紧是买不起还硬买";
@@ -75,28 +87,63 @@
 
 #pragma mark - 地图控件代理方法
 #pragma mark 显示大头针时调用，注意方法中的annotation参数是即将显示的大头针对象
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+     //由于当前位置的标注也是一个大头针，所以此时需要判断，此代理方法返回nil使用默认大头针视图
+    if ([annotation isKindOfClass:[Annotation class]]) {
+        static NSString *key1=@"AnnotationKey1";
+        MKAnnotationView *annotationView=[_mapView dequeueReusableAnnotationViewWithIdentifier:key1];
+        //如果缓存池中不存在则新建
+        if (!annotationView) {
+            annotationView=[[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:key1];
+            annotationView.calloutOffset = CGPointMake(0, 1);
+            annotationView.leftCalloutAccessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon_classify_cafe.png"]];//定义详情左侧视图
+    }
+        //修改大头针视图
+        //重新设置此类大头针视图的大头针模型(因为有可能是从缓存池中取出来的，位置是放到缓存池时的位置)
+        annotationView.annotation=annotation;
+        annotationView.image=((Annotation *)annotation).image;//设置大头针视图的图片
+        return annotationView;
+    
+    } else if ([annotation isKindOfClass:[CalloutAnnotation class]]){
+  //对于作为弹出详情视图的自定义大头针视图无弹出交互功能（canShowCallout=false，这是默认值），在其中可以自由添加其他视图（因为它本身继承于UIView）
+        CalloutAnnotationView *calloutView=[CalloutAnnotationView calloutViewWithMapView:mapView];
+        calloutView.annotation = annotation;
+        return calloutView;
+   } else {
+        return nil;
+    }
+}
 
+#pragma mark 选中大头针时触发
+//点击一般的大头针Annotation时添加一个大头针作为所点大头针的弹出详情视图
 
-//我这次就是要看看
-
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-//     //由于当前位置的标注也是一个大头针，所以此时需要判断，此代理方法返回nil使用默认大头针视图
-//    if ([annotation isKindOfClass:[Annotation class]]) {
-//    }
-//    
-//}
-
-
-
-
-
-
-
-
-
-
-
-
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+//    获取视图的annotation
+    Annotation *annotation = view.annotation;
+    if ([view.annotation isKindOfClass:[Annotation class]]) {
+        //点击一个大头针时移除其他弹出详情视图
+        [self removeCustomAnnotation];
+        //添加详情大头针，渲染此大头针视图时将此模型对象赋值给自定义大头针视图完成自动布局
+        CalloutAnnotation *callOUtAnnomation = [[CalloutAnnotation alloc] init];
+        callOUtAnnomation.icon = annotation.icon;
+        callOUtAnnomation.detail = annotation.detail;
+        callOUtAnnomation.rate = annotation.rate;
+        callOUtAnnomation.coordinate = annotation.coordinate;
+        [_mapView addAnnotation:callOUtAnnomation];
+    }
+}
+#pragma mark 取消选中时触发
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
+    [self removeCustomAnnotation];
+}
+#pragma mark 移除所用自定义大头针
+- (void)removeCustomAnnotation {
+    [_mapView.annotations enumerateObjectsUsingBlock:^(id<MKAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[CalloutAnnotation class]]) {
+            [_mapView removeAnnotation:obj];
+        }
+    }];
+}
 
 
 

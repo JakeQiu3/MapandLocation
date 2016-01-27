@@ -54,7 +54,7 @@
 }
 
 + (instancetype)calloutViewWithMapView:(MKMapView *)mapView {
-    static NSString *calloutKey = @"calloutKey";
+    static NSString *calloutKey = @"calloutKey1";
     CalloutAnnotationView *calloutView = (CalloutAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:calloutKey];
     if (!calloutView) {
         calloutView = [[CalloutAnnotationView alloc] init];
@@ -77,6 +77,8 @@
     _rateView.frame = CGRectMake(CGRectGetMaxX(_iconView.frame)+kSpacing, CGRectGetMaxY(_detailLabel.frame), annotation.rate.size.width, annotation.rate.size.height);
     
     _backgroundView.frame = CGRectMake(0, 0,CGRectGetMaxX(_detailLabel.frame)+kSpacing, _iconView.frame.size.height+2*kSpacing);
+//    设置整个大头针view的整个尺寸
+    self.bounds = CGRectMake(0, 0, _backgroundView.frame.size.width, _backgroundView.frame.size.height + kViewOffset);
     
     
     

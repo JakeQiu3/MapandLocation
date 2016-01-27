@@ -60,6 +60,8 @@
 		30118BC01C57BDE000C755E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				737578861C57449E00CEB825 /* Annotation.h */,
+				737578871C57449E00CEB825 /* Annotation.m */,
 				737578891C5744B700CEB825 /* CalloutAnnotation.h */,
 				7375788A1C5744B700CEB825 /* CalloutAnnotation.m */,
 			);
@@ -94,8 +96,6 @@
 			children = (
 				737578831C57444B00CEB825 /* MapKitViewController.h */,
 				737578841C57444B00CEB825 /* MapKitViewController.m */,
-				737578861C57449E00CEB825 /* Annotation.h */,
-				737578871C57449E00CEB825 /* Annotation.m */,
 				30118BC01C57BDE000C755E5 /* Model */,
 				30118BC11C57BDF000C755E5 /* VIew */,
 			);
@@ -285,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -323,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "地图和定位/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qsy.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "地图和定位/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qsy.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
