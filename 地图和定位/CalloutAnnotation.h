@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
-@interface CalloutAnnotation : NSObject<MKAnnotation>
+@interface CalloutAnnotation : NSObject <MKAnnotation>
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy,readonly) NSString *title;
 @property (nonatomic, copy,readonly) NSString *subtitle;

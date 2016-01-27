@@ -29,7 +29,7 @@
 
 - (void)initData {
     _dataArray = [[NSArray alloc] initWithObjects:@"MapKit",@"CoreLocation",@"AppleMap", nil];
-    _classArray = [[NSArray alloc] initWithObjects:@"NSThreadViewController",@"CollectionViewController",@"OperationViewController", nil];
+    _classArray = [[NSArray alloc] initWithObjects:@"MapKitViewController",@"",@"", nil];
 }
 
 - (void)setUI {
