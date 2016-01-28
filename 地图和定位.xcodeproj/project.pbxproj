@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7336847E1C59C66F0027A43D /* CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7336847D1C59C66F0027A43D /* CoreLocationViewController.m */; };
 		737578801C5743D600CEB825 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7375787F1C5743D600CEB825 /* MapKit.framework */; };
 		737578821C5743DE00CEB825 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737578811C5743DE00CEB825 /* CoreLocation.framework */; };
 		737578851C57444B00CEB825 /* MapKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737578841C57444B00CEB825 /* MapKitViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7336847C1C59C66F0027A43D /* CoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationViewController.h; sourceTree = "<group>"; };
+		7336847D1C59C66F0027A43D /* CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationViewController.m; sourceTree = "<group>"; };
 		7375787F1C5743D600CEB825 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		737578811C5743DE00CEB825 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		737578831C57444B00CEB825 /* MapKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapKitViewController.h; sourceTree = "<group>"; };
@@ -84,11 +87,13 @@
 			name = AppleMap;
 			sourceTree = "<group>";
 		};
-		7375787D1C573D3600CEB825 /* CoreLocation */ = {
+		7375787D1C573D3600CEB825 /* CoreLocation(定位) */ = {
 			isa = PBXGroup;
 			children = (
+				7336847C1C59C66F0027A43D /* CoreLocationViewController.h */,
+				7336847D1C59C66F0027A43D /* CoreLocationViewController.m */,
 			);
-			name = CoreLocation;
+			name = "CoreLocation(定位)";
 			sourceTree = "<group>";
 		};
 		7375787E1C573D3F00CEB825 /* MapKit（定位当前位置和加大头针） */ = {
@@ -128,7 +133,7 @@
 				737EBA5C1C573CBB002D88BC /* ViewController.h */,
 				737EBA5D1C573CBB002D88BC /* ViewController.m */,
 				7375787E1C573D3F00CEB825 /* MapKit（定位当前位置和加大头针） */,
-				7375787D1C573D3600CEB825 /* CoreLocation */,
+				7375787D1C573D3600CEB825 /* CoreLocation(定位) */,
 				7375787C1C573D2200CEB825 /* AppleMap */,
 				737EBA451C572679002D88BC /* Supporting Files */,
 			);
@@ -217,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7336847E1C59C66F0027A43D /* CoreLocationViewController.m in Sources */,
 				737578881C57449E00CEB825 /* Annotation.m in Sources */,
 				7375788E1C57453D00CEB825 /* CalloutAnnotationView.m in Sources */,
 				737EBA5E1C573CBB002D88BC /* ViewController.m in Sources */,

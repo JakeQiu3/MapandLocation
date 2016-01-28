@@ -41,20 +41,20 @@
     
     //请求定位服务
     _locationManager = [[CLLocationManager alloc] init];
-    _locationManager.delegate = self;
-     //定位 最小距离
-    _locationManager.distanceFilter = 1.0f;
-    //定位 精度
-    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
     if (![CLLocationManager locationServicesEnabled] || [CLLocationManager authorizationStatus]!=kCLAuthorizationStatusAuthorizedWhenInUse) {
         
        [_locationManager requestWhenInUseAuthorization];
      
     }
-    //    开始定位
-    [_locationManager startUpdatingLocation];
-
+    if ([CLLocationManager locationServicesEnabled] == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        _locationManager.delegate = self;
+        //定位 最小距离
+        _locationManager.distanceFilter = 1.0f;
+        //定位 精度
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        //    开始定位
+        [_locationManager startUpdatingLocation];
+    }
     //添加大头针
     [self addAnnotation];
 }
