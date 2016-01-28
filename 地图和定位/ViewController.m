@@ -28,7 +28,7 @@
 }
 
 - (void)initData {
-    _dataArray = [[NSArray alloc] initWithObjects:@"MapKit",@"CoreLocation",@"AppleMap", nil];
+    _dataArray = [[NSArray alloc] initWithObjects:@"MapKit（定位当前位置和加大头针）",@"CoreLocation",@"AppleMap", nil];
     _classArray = [[NSArray alloc] initWithObjects:@"MapKitViewController",@"",@"", nil];
 }
 
