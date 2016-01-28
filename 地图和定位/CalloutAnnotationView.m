@@ -44,6 +44,7 @@
     _detailLabel = [[UILabel alloc] init];
     _detailLabel.lineBreakMode = NSLineBreakByWordWrapping;
     _detailLabel.font = [UIFont systemFontOfSize:kDetailFontSize];
+    _detailLabel.numberOfLines = 0;
     [self addSubview:_detailLabel];
     
 //    下方星级图标
@@ -76,7 +77,7 @@
     _rateView.image = annotation.rate;
     _rateView.frame = CGRectMake(CGRectGetMaxX(_iconView.frame)+kSpacing, CGRectGetMaxY(_detailLabel.frame), annotation.rate.size.width, annotation.rate.size.height);
     
-    _backgroundView.frame = CGRectMake(0, 0,CGRectGetMaxX(_detailLabel.frame)+kSpacing, _iconView.frame.size.height+2*kSpacing);
+    _backgroundView.frame = CGRectMake(0, 0,CGRectGetMaxX(_detailLabel.frame)+kSpacing, CGRectGetMaxY( _rateView.frame)+2*kSpacing);
 //    设置整个大头针view的整个尺寸
     self.bounds = CGRectMake(0, 0, _backgroundView.frame.size.width, _backgroundView.frame.size.height + kViewOffset);
     

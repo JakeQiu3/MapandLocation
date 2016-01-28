@@ -18,7 +18,8 @@
 }
 
 @end
-
+#warning 少 注意必须添加下面这个字段到info.plist文件中
+// NSLocationWhenInUseUsageDescription
 @implementation MapKitViewController
 
 - (void)viewDidLoad {
@@ -35,26 +36,27 @@
     _mapView.userTrackingMode = MKUserTrackingModeFollow;
     //设置地图类型
     _mapView.mapType = MKMapTypeStandard;
-    //添加大头针
-    [self addAnnotation];
+    _mapView.showsUserLocation = YES;
+    _mapView.zoomEnabled = YES;
     
     //请求定位服务
     _locationManager = [[CLLocationManager alloc] init];
-    
+    _locationManager.delegate = self;
+     //定位 最小距离
+    _locationManager.distanceFilter = 1.0f;
+    //定位 精度
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     if (![CLLocationManager locationServicesEnabled] || [CLLocationManager authorizationStatus]!=kCLAuthorizationStatusAuthorizedWhenInUse) {
-        //设置代理
-        _locationManager.delegate = self;
-        //设置定位精度
-        _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
-        //定位频率,每隔多少米定位一次
-        CLLocationDistance distance=10.0;//十米定位一次
-        _locationManager.distanceFilter=distance;
-        //启动跟踪定位
-        [_locationManager startUpdatingLocation];
-        [_locationManager requestWhenInUseAuthorization];
-        [_locationManager requestAlwaysAuthorization];
+        
+       [_locationManager requestWhenInUseAuthorization];
+     
     }
+    //    开始定位
+    [_locationManager startUpdatingLocation];
+
+    //添加大头针
+    [self addAnnotation];
 }
 
 #pragma mark 添加2个大头针
@@ -144,8 +146,10 @@
         }
     }];
 }
-
-
+#pragma mark location的协议方法
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    NSLog(@"%@",locations);
+}
 
 
 @end
