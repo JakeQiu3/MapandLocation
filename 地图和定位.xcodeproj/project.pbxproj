@@ -91,7 +91,7 @@
 			name = CoreLocation;
 			sourceTree = "<group>";
 		};
-		7375787E1C573D3F00CEB825 /* MapKit */ = {
+		7375787E1C573D3F00CEB825 /* MapKit（定位当前位置和加大头针） */ = {
 			isa = PBXGroup;
 			children = (
 				737578831C57444B00CEB825 /* MapKitViewController.h */,
@@ -99,7 +99,7 @@
 				30118BC01C57BDE000C755E5 /* Model */,
 				30118BC11C57BDF000C755E5 /* VIew */,
 			);
-			name = MapKit;
+			name = "MapKit（定位当前位置和加大头针）";
 			sourceTree = "<group>";
 		};
 		737EBA391C572678002D88BC = {
@@ -127,7 +127,7 @@
 				737EBA491C572679002D88BC /* AppDelegate.m */,
 				737EBA5C1C573CBB002D88BC /* ViewController.h */,
 				737EBA5D1C573CBB002D88BC /* ViewController.m */,
-				7375787E1C573D3F00CEB825 /* MapKit */,
+				7375787E1C573D3F00CEB825 /* MapKit（定位当前位置和加大头针） */,
 				7375787D1C573D3600CEB825 /* CoreLocation */,
 				7375787C1C573D2200CEB825 /* AppleMap */,
 				737EBA451C572679002D88BC /* Supporting Files */,
