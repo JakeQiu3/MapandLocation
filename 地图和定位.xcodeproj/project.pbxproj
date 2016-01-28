@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7336847E1C59C66F0027A43D /* CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7336847D1C59C66F0027A43D /* CoreLocationViewController.m */; };
+		733684811C59ED7D0027A43D /* AppleMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733684801C59ED7D0027A43D /* AppleMapViewController.m */; };
 		737578801C5743D600CEB825 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7375787F1C5743D600CEB825 /* MapKit.framework */; };
 		737578821C5743DE00CEB825 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737578811C5743DE00CEB825 /* CoreLocation.framework */; };
 		737578851C57444B00CEB825 /* MapKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737578841C57444B00CEB825 /* MapKitViewController.m */; };
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		7336847C1C59C66F0027A43D /* CoreLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationViewController.h; sourceTree = "<group>"; };
 		7336847D1C59C66F0027A43D /* CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationViewController.m; sourceTree = "<group>"; };
+		7336847F1C59ED7D0027A43D /* AppleMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleMapViewController.h; sourceTree = "<group>"; };
+		733684801C59ED7D0027A43D /* AppleMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleMapViewController.m; sourceTree = "<group>"; };
 		7375787F1C5743D600CEB825 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		737578811C5743DE00CEB825 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		737578831C57444B00CEB825 /* MapKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapKitViewController.h; sourceTree = "<group>"; };
@@ -80,11 +83,13 @@
 			name = VIew;
 			sourceTree = "<group>";
 		};
-		7375787C1C573D2200CEB825 /* AppleMap */ = {
+		7375787C1C573D2200CEB825 /* AppleMap(调用系统的地图) */ = {
 			isa = PBXGroup;
 			children = (
+				7336847F1C59ED7D0027A43D /* AppleMapViewController.h */,
+				733684801C59ED7D0027A43D /* AppleMapViewController.m */,
 			);
-			name = AppleMap;
+			name = "AppleMap(调用系统的地图)";
 			sourceTree = "<group>";
 		};
 		7375787D1C573D3600CEB825 /* CoreLocation(定位) */ = {
@@ -134,7 +139,7 @@
 				737EBA5D1C573CBB002D88BC /* ViewController.m */,
 				7375787E1C573D3F00CEB825 /* MapKit（定位当前位置和加大头针） */,
 				7375787D1C573D3600CEB825 /* CoreLocation(定位) */,
-				7375787C1C573D2200CEB825 /* AppleMap */,
+				7375787C1C573D2200CEB825 /* AppleMap(调用系统的地图) */,
 				737EBA451C572679002D88BC /* Supporting Files */,
 			);
 			path = "地图和定位";
@@ -229,6 +234,7 @@
 				737EBA4A1C572679002D88BC /* AppDelegate.m in Sources */,
 				7375788B1C5744B700CEB825 /* CalloutAnnotation.m in Sources */,
 				737578851C57444B00CEB825 /* MapKitViewController.m in Sources */,
+				733684811C59ED7D0027A43D /* AppleMapViewController.m in Sources */,
 				737EBA471C572679002D88BC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
