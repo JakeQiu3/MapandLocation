@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //  初始化地图
-    [self addMap];
+//    [self addMap];
 //  添加定位管理器
     [self addLocation];
 // 初始化地理位置和定位

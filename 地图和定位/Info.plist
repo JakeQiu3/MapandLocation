@@ -43,9 +43,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>当前应用需要启用定位服务方可使用</string>
 	<key>NSLocationUsageDescription</key>
-	<string>当前需要启用定位服务</string>
+	<string>定位服务开启</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>使用时才定位</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>一直使用定位</string>
 </dict>
 </plist>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7336847E1C59C66F0027A43D /* CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7336847D1C59C66F0027A43D /* CoreLocationViewController.m */; };
 		733684811C59ED7D0027A43D /* AppleMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733684801C59ED7D0027A43D /* AppleMapViewController.m */; };
+		736764291D9D1D70003A6658 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736764281D9D1D70003A6658 /* LocationViewController.m */; };
+		7367642C1D9D346E003A6658 /* NSDictionary+Array+QSYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7367642B1D9D346E003A6658 /* NSDictionary+Array+QSYLog.m */; };
 		737578801C5743D600CEB825 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7375787F1C5743D600CEB825 /* MapKit.framework */; };
 		737578821C5743DE00CEB825 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737578811C5743DE00CEB825 /* CoreLocation.framework */; };
 		737578851C57444B00CEB825 /* MapKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737578841C57444B00CEB825 /* MapKitViewController.m */; };
@@ -28,6 +30,10 @@
 		7336847D1C59C66F0027A43D /* CoreLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationViewController.m; sourceTree = "<group>"; };
 		7336847F1C59ED7D0027A43D /* AppleMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleMapViewController.h; sourceTree = "<group>"; };
 		733684801C59ED7D0027A43D /* AppleMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleMapViewController.m; sourceTree = "<group>"; };
+		736764271D9D1D70003A6658 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		736764281D9D1D70003A6658 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		7367642A1D9D346E003A6658 /* NSDictionary+Array+QSYLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Array+QSYLog.h"; sourceTree = "<group>"; };
+		7367642B1D9D346E003A6658 /* NSDictionary+Array+QSYLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Array+QSYLog.m"; sourceTree = "<group>"; };
 		7375787F1C5743D600CEB825 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		737578811C5743DE00CEB825 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		737578831C57444B00CEB825 /* MapKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapKitViewController.h; sourceTree = "<group>"; };
@@ -88,6 +94,10 @@
 			children = (
 				7336847F1C59ED7D0027A43D /* AppleMapViewController.h */,
 				733684801C59ED7D0027A43D /* AppleMapViewController.m */,
+				736764271D9D1D70003A6658 /* LocationViewController.h */,
+				736764281D9D1D70003A6658 /* LocationViewController.m */,
+				7367642A1D9D346E003A6658 /* NSDictionary+Array+QSYLog.h */,
+				7367642B1D9D346E003A6658 /* NSDictionary+Array+QSYLog.m */,
 			);
 			name = "AppleMap(调用系统的地图)";
 			sourceTree = "<group>";
@@ -230,12 +240,14 @@
 				7336847E1C59C66F0027A43D /* CoreLocationViewController.m in Sources */,
 				737578881C57449E00CEB825 /* Annotation.m in Sources */,
 				7375788E1C57453D00CEB825 /* CalloutAnnotationView.m in Sources */,
+				7367642C1D9D346E003A6658 /* NSDictionary+Array+QSYLog.m in Sources */,
 				737EBA5E1C573CBB002D88BC /* ViewController.m in Sources */,
 				737EBA4A1C572679002D88BC /* AppDelegate.m in Sources */,
 				7375788B1C5744B700CEB825 /* CalloutAnnotation.m in Sources */,
 				737578851C57444B00CEB825 /* MapKitViewController.m in Sources */,
 				733684811C59ED7D0027A43D /* AppleMapViewController.m in Sources */,
 				737EBA471C572679002D88BC /* main.m in Sources */,
+				736764291D9D1D70003A6658 /* LocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

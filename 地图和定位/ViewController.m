@@ -28,8 +28,8 @@
 }
 
 - (void)initData {
-    _dataArray = [[NSArray alloc] initWithObjects:@"MapKit（定位当前位置和加大头针）",@"CoreLocation(定位)",@"AppleMap(推荐,调用系统的地图)", nil];
-    _classArray = [[NSArray alloc] initWithObjects:@"MapKitViewController",@"CoreLocationViewController",@"AppleMapViewController", nil];
+    _dataArray = [[NSArray alloc] initWithObjects:@"MapKit（定位当前位置和加大头针）",@"CoreLocation(定位)",@"AppleMap(推荐,调用系统的地图)",@"原生定位2", nil];
+    _classArray = [[NSArray alloc] initWithObjects:@"MapKitViewController",@"CoreLocationViewController",@"AppleMapViewController",@"LocationViewController", nil];
 }
 
 - (void)setUI {
